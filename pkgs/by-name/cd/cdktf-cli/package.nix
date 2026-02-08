@@ -66,7 +66,7 @@ stdenv.mkDerivation (finalAttrs: {
     nodejs_20
     patchelf
     removeReferencesTo
-    yarn
+    (yarn.override { nodejs = nodejs_20; })
   ];
 
   postPatch = ''
